@@ -20,18 +20,9 @@ session_start();
 
 		<p><label>Enter PIN: <input type="number" name="pin"></label></p>
 
-		<?php
-
-			if(isset($_SESSION['e_pin']))
-			{
-				echo '<p class="error">'.$_SESSION['e_pin'].'</p>';
-				unset($_SESSION['e_pin']);
-			}
-
-
-		?>
 		<input type="submit" value="OK">
 
+	</form>
 
 </div>
 </body>

@@ -3,33 +3,35 @@
 session_start();
 
 $card = $_SESSION['card'];
-
-$names = file("cards.txt");
-$number = count($names);
-
-for($i = 0; $i < $number; $i++)
-{
-	$array = explode(" ", $names[$i]);
-
-	for($j = 0; $j < 6; $j++)
-	{
-		$_SESSION['cards'][$i][$j] = $array[$j];
-
-	}
-
-}
+$tries = $_SESSION['tries'];
 
 $pin = $_POST['pin'];
 
 if($pin == $_SESSION['cards'][$card][2])
 {
-	header('Location: menu.php');
+	$_SESSION['info'] = "You are logged in";
+	header('Location: info.php');
 }
 else
 {
-	$_SESSION['e_pin'] = "Wrong PIN";
-	header('Location: index2.php');
+	$tries--;
+
+	if($tries == 0)
+	{
+		$_SESSION['info'] = "Your card is blocked";
+		$_SESSION['cards'][$card][4] = "Blocked";
+		header('Location: info.php');
+		exit();
+	}
+
+	$_SESSION['info'] = "Wrong PIN";
+
+	$_SESSION['tries'] = $tries;
+
+	header('Location: info.php');
+
 }
+	
 
 
 ?>

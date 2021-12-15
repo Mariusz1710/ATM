@@ -18,8 +18,6 @@ session_start();
 
 	<form action="option.php" method="post">
 
-		<p><h2>Select option</h2></p>
-
 		<p><input type="radio" id="withdraw" name="option" value="withdraw">
 		<label for="withdraw">Withdraw</label></p>
 

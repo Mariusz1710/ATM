@@ -18,7 +18,7 @@ session_start();
 
 	<form action="validate_card.php" method="post">
 
-		<p class="blue"><label>Enter a number of the card: <input type="number" name="card"></label></p>
+		<p><label>Enter the number of a card: <input type="number" name="card"></label></p>
 
 		<?php
 
