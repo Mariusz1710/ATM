@@ -18,14 +18,14 @@ session_start();
 
 	<form action="option.php" method="post">
 
-		<p><input type="radio" id="withdraw" name="option" value="withdraw">
+		<p><input type="radio" id="withdraw" name="option" value="withdraw" checked>
 		<label for="withdraw">Withdraw</label></p>
 
 		<p><input type="radio" id="deposit" name="option" value="deposit">
 		<label for="deposit">Deposit</label></p>
 
 		<p><input type="radio" id="check" name="option" value="check">
-		<label for="check">Check</label></p>
+		<label for="check">Check the balance of the account</label></p>
 
 		<p><input type="radio" id="change" name="option" value="change">
 		<label for="change">Change my data</label></p>
