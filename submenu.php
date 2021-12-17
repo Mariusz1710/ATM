@@ -18,11 +18,12 @@ session_start();
 
 	<form action="submenu-option.php" method="post">
 	
-		<p><label for="name">Change your name</label><input type="radio" id="name" name="submenu" checked></p>
-		<p><label for="surname">Change your surname</label><input type="radio" id="surname" name="submenu"></p>
-		<p><label for="check">Check your provate data</label><input type="radio" id="check" name="submenu"></p>
-		<p><label for="change">Change your private data</label><input type="radio" id="check" name="submenu"></p>
-		<p><label for="exit">Exit</label><input type="radio" id="exit" name="submenu"></p>
+		<p><input type="radio" id="name" name="submenu" value="name" checked><label for="name">Change your name</label></p>
+		<p><input type="radio" id="surname" name="submenu" value="surname">Change your surname</label></p>
+		<p><input type="radio" id="pin" name="submenu" value="pin"><label for="pin">Change PIN</label></p>
+		<p><input type="radio" id="check" name="submenu" value="check"><label for="check">Check your private data</label></p>
+		<p><input type="radio" id="exit" name="submenu" value="exit"><label for="exit">Exit</label></p>
+		<input type="submit" value="OK">
 
 	</form>
 

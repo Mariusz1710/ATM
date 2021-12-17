@@ -2,6 +2,7 @@
 
 session_start();
 
+
 $card = $_SESSION['card'];
 $option = $_POST['option'];
 $_SESSION['option'] = $_POST['option'];
@@ -22,7 +23,7 @@ else if($option == "change")
 	header('Location: submenu.php');
 	exit();
 }
-else if($option == "end")
+else if($option == "exit")
 {
 	header('Location: end.php');
 	exit();
